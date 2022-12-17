@@ -53,7 +53,7 @@ const projects = [
     description: `ShoppingNV is a grocery shopping website that manages new and returning customers.\nI have made this project using React, Node.js, PostgreSQL, Redux, Sequelize, Cloudinary, Material UI, React-router-dom, Axios, Formik and Bcrypt.`,
     image: project1Img,
     githubRepositoryURL: "https://github.com/nivamitay1/ShoppingNV-project",
-    demoURL: "https://online-shop-niv.herokuapp.com/",
+    // demoURL: "https://online-shop-niv.herokuapp.com/",
   },
   {
     name: "Weather Forecast",
@@ -74,7 +74,7 @@ const projects = [
     description: `This project is a group chat app.\nI have made this project in order to learn how to work with sokets.\nIn this app I used React, Node.js, Socket.io, express, Bootstrap and react-router-dom.`,
     image: project4Img,
     githubRepositoryURL: "https://github.com/nivamitay1/Chat-App",
-    demoURL: "https://gracious-varahamihira-f5e6b0.netlify.app/",
+    // demoURL: "https://gracious-varahamihira-f5e6b0.netlify.app/",
   },
 ];
 
@@ -114,14 +114,19 @@ const Portfolio = () => {
                   icon={<GitHubIcon />}
                   label="Github Repository"
                 />
-                <BottomNavigationAction
-                  component={Link}
-                  to={{ pathname: project.demoURL }}
-                  showLabel
-                  target="_blank"
-                  icon={<PublicIcon />}
-                  label="Live Demo"
-                />
+                {project.demoURL ? (
+                  <BottomNavigationAction
+                    component={Link}
+                    to={{ pathname: project.demoURL }}
+                    showLabel
+                    target="_blank"
+                    icon={<PublicIcon />}
+                    label="Live Demo"
+                    dis
+                  />
+                ) : (
+                  <></>
+                )}
               </CardActions>
             </Card>
           </Grid>

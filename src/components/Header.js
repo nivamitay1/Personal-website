@@ -7,7 +7,7 @@ import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
 import { Button } from "@material-ui/core";
-import pdf from "../files/nivAmitayResume.pdf";
+import pdf from "../files/Niv-Amitay's-Resume.pdf";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
